@@ -6,17 +6,17 @@ import java.util.Scanner;
 
 public class GuessTheNumberrr {
     public static void main(String[] args) {
-        startGame();
+        goGame();
     }
 
-    public static void startGame() {
+    public static void goGame() {
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();
         System.out.println("Welcome to the Guess the Number game.");
 
         while (true) {
             int maxNumber = chooseDifficulty(sc);
-            int secretNumber = rnd.nextInt(maxNumber) + 1; // number from 1-100
+            int rundonNumber = rnd.nextInt(maxNumber) + 1; // number from 1-100
             int attempts = 0;
 
             System.out.println("I have chosen a number between 1 and 100. Guess.");
@@ -26,9 +26,9 @@ public class GuessTheNumberrr {
                 int guess = readInt(sc);
                 attempts++;
 
-                if (guess < secretNumber) {
+                if (guess < randomNumber) {
                     System.out.println("small");
-                } else if (guess > secretNumber) {
+                } else if (guess > randomNumber) {
                     System.out.println("big");
                 } else {
                     System.out.println("You guessed it");
