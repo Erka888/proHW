@@ -16,7 +16,7 @@ public class GuessTheNumberrr {
 
         while (true) {
             int maxNumber = chooseDifficulty(sc);
-            int rundomNumber = rnd.nextInt(maxNumber) + 1; // number from 1-100
+            int anyNumber = rnd.nextInt(maxNumber) + 1; // number from 1-100
             int attempts = 0;
 
             System.out.println("I have chosen a number between 1 and " + maxNumber + ". Guess.");
@@ -28,7 +28,7 @@ public class GuessTheNumberrr {
 
                 if (guess < rundomNumber) {
                     System.out.println("small");
-                } else if (guess > rundomNumber) {
+                } else if (guess > anyNumber) {
                     System.out.println("big");
                 } else {
                     System.out.println("You guessed it");
